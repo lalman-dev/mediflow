@@ -11,7 +11,6 @@
   --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-
 :root {
   color-scheme: dark;
 }
@@ -21,13 +20,14 @@
   --color-foreground: #0f172a;
 }
 
-
+/* Glass UI */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
 }
 
+/* Gradient text */
 .gradient-text {
   background: linear-gradient(to right, #7c3aed, #ec4899);
   -webkit-background-clip: text;
