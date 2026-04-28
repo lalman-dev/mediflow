@@ -6,9 +6,8 @@ export default function Home() {
       <h1 className="text-3xl font-bold gradient-text">MediFlow</h1>
 
       <p>Theme Test</p>
-      <div className="w-10 h-10 bg-red-500">
-        <ThemeToggle />
-      </div>
+
+      <ThemeToggle />
     </main>
   );
 }
