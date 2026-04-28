@@ -1,3 +1,5 @@
+"use client";
+
 import { ViewToggle } from "@/features/patients/components/view-toggle";
 import { PatientsGrid } from "@/features/patients/components/patient-grid";
 import { PatientsList } from "@/features/patients/components/patient-list";
