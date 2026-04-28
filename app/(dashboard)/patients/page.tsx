@@ -1,8 +1,8 @@
 "use client";
 
 import { PatientViewToggle } from "@/features/patients/components/view-toggle";
-import { PatientsGrid } from "@/features/patients/components/patient-grid";
-import { PatientsList } from "@/features/patients/components/patient-list";
+import { PatientGrid } from "@/features/patients/components/patient-grid";
+import { PatientList } from "@/features/patients/components/patient-list";
 import { usePatientStore } from "@/store/usePatientStore";
 
 export default function PatientsPage() {
@@ -12,7 +12,7 @@ export default function PatientsPage() {
     <div className="space-y-6">
       <PatientViewToggle />
 
-      {viewMode === "grid" ? <PatientsGrid /> : <PatientsList />}
+      {viewMode === "grid" ? <PatientGrid /> : <PatientList />}
     </div>
   );
 }
