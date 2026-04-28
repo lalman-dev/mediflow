@@ -1,26 +1,30 @@
 "use client";
 
 import { usePatientStore } from "@/store/usePatientStore";
-import { Button } from "@/components/ui/button";
+import { LayoutGrid, List } from "lucide-react";
 
-export function ViewToggle() {
+export function PatientViewToggle() {
   const { viewMode, setViewMode } = usePatientStore();
 
   return (
-    <div className="flex gap-2">
-      <Button
-        variant={viewMode === "grid" ? "default" : "outline"}
+    <div className="flex justify-end gap-2">
+      <button
         onClick={() => setViewMode("grid")}
+        className={`p-2 rounded-lg glass ${
+          viewMode === "grid" ? "bg-white/10" : ""
+        }`}
       >
-        Grid
-      </Button>
+        <LayoutGrid size={18} />
+      </button>
 
-      <Button
-        variant={viewMode === "list" ? "default" : "outline"}
+      <button
         onClick={() => setViewMode("list")}
+        className={`p-2 rounded-lg glass ${
+          viewMode === "list" ? "bg-white/10" : ""
+        }`}
       >
-        List
-      </Button>
+        <List size={18} />
+      </button>
     </div>
   );
 }
