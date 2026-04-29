@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 export function PatientGrid() {
   return (
     <motion.div
-      whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 200 }}
       layout
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
     >
       {patients.map((patient) => (
         <motion.div
+          whileHover={{ y: -4 }}
+          transition={{ type: "spring", stiffness: 200 }}
           key={patient.id}
           layout
           initial={{ opacity: 0, scale: 0.9 }}
@@ -22,7 +22,15 @@ export function PatientGrid() {
           <Card className="glass p-4 space-y-2">
             <h3 className="font-semibold">{patient.name}</h3>
 
-            <p className="text-sm opacity-70">Status: {patient.status}</p>
+            <span
+              className={`px-2 py-1 w-15 flex items-center justify-center rounded-full text-xs ${
+                patient.status === "Active"
+                  ? "bg-green-500/20 text-green-400"
+                  : "bg-gray-500/20 text-gray-400"
+              }`}
+            >
+              {patient.status}
+            </span>
 
             <p className="text-sm opacity-70">
               Last Visit: {patient.lastVisit}

@@ -15,9 +15,11 @@ export function ThemeToggle() {
   if (!mounted) return null;
 
   return (
-    <Switch
-      checked={theme === "dark"}
-      onCheckedChange={() => setTheme(theme === "dark" ? "light" : "dark")}
-    />
+    <div className="bg-zinc-700 rounded-2xl flex justify-center">
+      <Switch
+        checked={theme === "dark"}
+        onCheckedChange={() => setTheme(theme === "dark" ? "light" : "dark")}
+      />
+    </div>
   );
 }
