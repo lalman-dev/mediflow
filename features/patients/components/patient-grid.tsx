@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 export function PatientGrid() {
   return (
     <motion.div
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 200 }}
       layout
       className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
     >
