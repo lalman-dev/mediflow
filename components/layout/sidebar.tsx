@@ -5,8 +5,10 @@ import { LayoutDashboard, Users, BarChart3 } from "lucide-react";
 
 export function Sidebar() {
   return (
-    <aside className="w-64 h-screen p-4 hidden md:flex flex-col glass">
-      <h1 className="text-xl font-bold gradient-text mb-8">MediFlow</h1>
+    <aside className="w-64 h-screen p-5 glass border-r border-white/10">
+      <h1 className="text-xl font-bold bg-linear-to-r from-violet-500 to-pink-500 bg-clip-text text-transparent">
+        MediFlow
+      </h1>
 
       <nav className="space-y-3">
         <Link href="/dashboard" className="flex items-center gap-2">
